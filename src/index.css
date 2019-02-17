@@ -1,14 +1,157 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+html,
+body,
+#root {
+  height: 100%;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: #47C9E0;
+  height: 100%;
+}
+body .content-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  min-width: 300px;
+}
+body .content-container .content {
+  margin: 0 auto;
+  max-width: 500px;
+  flex: 1 0 60%;
+}
+body .content-container .content .section.grid {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  grid-template-rows: 32% 32% 32%;
+  width: 100%;
+  max-height: 500px;
+  grid-column-gap: 2%;
+  grid-row-gap: 2%;
+  margin: 0 auto;
+  height: 80vw;
+}
+body .content-container .content .section.grid .square {
+  position: relative;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  -webkit-box-shadow: 5px 3px 0px 0px #23b7d1;
+  -moz-box-shadow: 5px 3px 0px 0px #23b7d1;
+  box-shadow: 5px 3px 0px 0px #23b7d1;
+  cursor: pointer;
+}
+body .content-container .content .section.grid .square .status-container {
+  flex: 1 0 90% ;
+  height: 11vw;
+  display: flex;
+  align-items: center;
+}
+body .content-container .content .section.grid .square .status-container .x-shape,
+body .content-container .content .section.grid .square .status-container .o-shape {
+  display: none;
+  margin: 0 auto;
+  position: relative;
+}
+body .content-container .content .section.grid .square .status-container .x-shape {
+  position: relative;
+  width: 2.5vw;
+}
+body .content-container .content .section.grid .square .status-container .x-shape .slash {
+  background: #23b7d1;
+  width: 2.8vw;
+  height: 10vw;
+  transform: rotate(45deg);
+}
+body .content-container .content .section.grid .square .status-container .x-shape .slash:last-of-type {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-45deg);
+}
+body .content-container .content .section.grid .square .status-container .o-shape {
+  background: transparent;
+  box-sizing: border-box;
+  height: 10vw;
+  width: 10vw;
+  border: 2.8vw solid #23b7d1;
+  margin: 0 auto;
+  border-radius: 14vw;
+}
+body .content-container .content .section.grid .square.X .status-container .x-shape {
+  display: block;
+}
+body .content-container .content .section.grid .square.O .status-container .o-shape {
+  display: block;
+}
+body .content-container .content .section.pagination,
+body .content-container .content .section.dash {
+  display: flex;
+  width: 100%;
+  margin: 1% 0;
+}
+body .content-container .content .section.dash {
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  height: 9%;
+  background: #fff;
+  -webkit-box-shadow: 5px 3px 0px 0px #23b7d1;
+  -moz-box-shadow: 5px 3px 0px 0px #23b7d1;
+  box-shadow: 5px 3px 0px 0px #23b7d1;
+}
+body .content-container .content .section.dash h2 {
+  flex: 0 0 90%;
+  margin: 0;
+  margin-left: 2%;
+  line-height: 1;
+  color: #1C0135;
+}
+body .content-container .content .section.dash button {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+body .content-container .content .section.dash button img {
+  top: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+body .content-container .content .section button {
+  width: 9%;
+  background: #fff;
+  color: #1C0135;
+  border: none;
+  outline: none;
+  position: relative;
+  padding: 0;
+  margin-right: 1.1%;
+  cursor: pointer;
+  -webkit-box-shadow: 5px 3px 0px 0px #23b7d1;
+  -moz-box-shadow: 5px 3px 0px 0px #23b7d1;
+  box-shadow: 5px 3px 0px 0px #23b7d1;
+}
+body .content-container .content .section button img,
+body .content-container .content .section button p {
+  position: absolute;
+  color: #47C9E0;
+  z-index: 2;
+  width: 100%;
+  left: 0%;
+  top: 27%;
+  margin: 0;
+}
+body .content-container .content .section button:after {
+  content: "";
+  display: block;
+  padding-top: 50%;
+  padding-bottom: 50%;
+}
+body .content-container .content .section button:first-of-type {
+  background-color: #1C0135;
+  color: #fff;
+}
+body .content-container .content .section button:last-of-type {
+  margin-right: 0;
 }
