@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dash It should render correctly in "debug" mode 1`] = `
+<div
+  className="dash section"
+>
+  <h2>
+    Cat's game.
+  </h2>
+  <button
+    id="refresh"
+  >
+    <img
+      src="https://flaticons.net/gd/makefg.php?i=icons/Application/Command-Reset.png&r=255&g=255&b=255"
+    />
+  </button>
+</div>
+`;

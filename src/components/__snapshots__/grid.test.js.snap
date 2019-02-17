@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Grid It should render correctly in "debug" mode 1`] = `
+<div
+  className="grid section"
+>
+  <Square
+    onClick={[Function]}
+    status={null}
+  />
+  <Square
+    onClick={[Function]}
+    status={null}
+  />
+  <Square
+    onClick={[Function]}
+    status={null}
+  />
+  <Square
+    onClick={[Function]}
+    status={null}
+  />
+  <Square
+    onClick={[Function]}
+    status={null}
+  />
+  <Square
+    onClick={[Function]}
+    status={null}
+  />
+  <Square
+    onClick={[Function]}
+    status={null}
+  />
+  <Square
+    onClick={[Function]}
+    status={null}
+  />
+  <Square
+    onClick={[Function]}
+    status={null}
+  />
+</div>
+`;
