@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Grid} from './components/grid';
 import {Dash} from './components/dash';
-import {findWinner} from './services/game-engine';
+import {findWinner} from './services/findWinner';
 
 
 
@@ -40,7 +40,7 @@ class App extends Component {
   changeTurn(target) {
     this.setState({
       turnCounter: target,
-      turn: target%2 == 0 ? 'X' : 'O',
+      turn: target%2 === 0 ? 'X' : 'O',
     });
   }
 
@@ -70,8 +70,7 @@ class App extends Component {
         <div className="content">
           <Dash 
             grid = {currentGrid} 
-            turn= {this.state.turn} 
-            turnPager = {this.turnPager} 
+            turn= {this.state.turn}
             turnCounter={this.state.turnCounter}
             newGame = {this.newGame}
             />    
